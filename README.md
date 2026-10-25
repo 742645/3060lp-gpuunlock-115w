@@ -1,5 +1,7 @@
 # RTX 3060 Laptop GPU Unlock
 
+[中文](README.md) | [English](README.en.md)
+
 在 Linux 虚拟机中，对直通的 **RTX 3060 Laptop / GA106M** 进行 Tensor 速率解锁，并通过 VBIOS 内存覆盖测试 **115W 功耗上限**。
 
 本仓库包含单卡实验适配、启动镜像集成脚本、cuBLAS GEMM 基准、结果核验工具和原始证据。实验基于 [gpu-unlock-ada](https://github.com/JustAResearcher/gpu-unlock-ada) 与 [NVIDIA Linux VBIOS Vix Loader](https://github.com/Panchovix/nvidia-linux-vbios-vix-loader)，VBIOS 编辑使用 [NVIDIA VBIOS Vix Editor](https://github.com/Panchovix/nvidia-vbios-vix-editor)，为安全不提供解锁功耗vbios文件，完整来源见下方“开源项目与致谢”。
