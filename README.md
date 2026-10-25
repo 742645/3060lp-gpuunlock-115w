@@ -84,7 +84,7 @@ SSH 工具从本地环境变量读取 `GPU_SSH_HOST`、`GPU_SSH_USER`、`GPU_SSH
 | 阶段 | 对应文件与要求 |
 |---|---|
 | 准备环境 | [依赖安装脚本](scripts/install-dependencies.sh)；目标机需要内核头文件、编译工具、DKMS、CUDA/cuBLAS/CUPTI 和匹配驱动 |
-| 适配与冻结 | [GA106M 适配](tools/adapt_ga106m.py)、[五路径基准准备](scripts/prepare-paired-benchmark.sh)；固定上游版本与基准文件 |
+| 适配与冻结 | [GA106M 适配](tools/adapt_ga106m.py)、[路径基准准备](scripts/prepare-paired-benchmark.sh)；固定上游版本与基准文件 |
 | 原厂 80W 基线 | [原厂启动准备](scripts/stage-stock-baseline.sh)、[配对采集](scripts/collect-paired-benchmark.sh)；先确认硬件为半速且没有解锁请求 |
 | 解锁 80W | [独立实验启动镜像](scripts/stage-experiment-boot.sh)、[配对采集](scripts/collect-paired-benchmark.sh)；要求新的成功事务与全速读数 |
 | 115W 组合 | [615 驱动准备](scripts/install-vix-driver.sh)、[Vix 集成](scripts/prepare-vix-combination.sh)、[115W 默认值准备](scripts/prepare-vix-default115w.sh)、[组合启动镜像](scripts/stage-vix-combination.sh) |
