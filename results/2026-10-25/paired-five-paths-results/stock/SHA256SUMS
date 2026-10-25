@@ -1,0 +1,5 @@
+ebee341b2830b602612c48651530dc0730527a32884c1d5598483d622450c538  build/paired-five-paths/paired_gemm
+4de0341e16f40e03b0603528c8e9727d3d28cf733a096ef6e7fa8b98012bfb68  build/paired-five-paths/paired_gemm.cu
+6571bf8344cf13f3b116e6d613dd234cefca081c2303c3667e71b25d0eba5ec2  /lib/x86_64-linux-gnu/libcublas.so.12
+5bae62ee3b74284d2e22a22fcf9e5d7962456dddbde8b6b13be706628053a427  /lib/x86_64-linux-gnu/libcublasLt.so.12
+d846f6110f1ac3a1f58ee531dadce415f6c001f7465183663a45569bb7013249  /lib/x86_64-linux-gnu/libcupti.so.12

@@ -1,0 +1,66 @@
+{
+  "kernel": "6.8.0-147-generic",
+  "power_cap_W": 80.0,
+  "driver": "580.178.04",
+  "comparison": [
+    {
+      "mode": "FP16_FP32acc",
+      "n": 2048,
+      "stock_TFLOPS": 24.179889,
+      "unlocked_TFLOPS": 41.060246,
+      "gain_percent": 69.81155703402939
+    },
+    {
+      "mode": "FP16_FP32acc",
+      "n": 4096,
+      "stock_TFLOPS": 25.591361,
+      "unlocked_TFLOPS": 40.912553,
+      "gain_percent": 59.86860956711135
+    },
+    {
+      "mode": "FP16_FP32acc",
+      "n": 8192,
+      "stock_TFLOPS": 24.917197,
+      "unlocked_TFLOPS": 37.690823,
+      "gain_percent": 51.26429750505244
+    },
+    {
+      "mode": "FP32_strict",
+      "n": 2048,
+      "stock_TFLOPS": 6.400708,
+      "unlocked_TFLOPS": 6.496628,
+      "gain_percent": 1.4985842191207688
+    },
+    {
+      "mode": "FP32_strict",
+      "n": 4096,
+      "stock_TFLOPS": 6.421133,
+      "unlocked_TFLOPS": 6.445803,
+      "gain_percent": 0.38420010923305714
+    },
+    {
+      "mode": "FP32_strict",
+      "n": 8192,
+      "stock_TFLOPS": 7.834352,
+      "unlocked_TFLOPS": 7.825873,
+      "gain_percent": -0.10822847888377618
+    }
+  ],
+  "telemetry": {
+    "stock": {
+      "samples": 288,
+      "observed_max_temperature_C": 50.0,
+      "observed_max_power_W": 80.44,
+      "observed_max_sm_MHz": 2010.0
+    },
+    "unlocked": {
+      "samples": 262,
+      "observed_max_temperature_C": 49.0,
+      "observed_max_power_W": 80.78,
+      "observed_max_sm_MHz": 2010.0
+    }
+  },
+  "warm_boot_state": "retained-unlock-no-new-transaction",
+  "numerical_failures": 0,
+  "Xid_errors_in_unlocked_and_repeat_journals": 0
+}

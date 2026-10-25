@@ -1,0 +1,66 @@
+[
+  {
+    "package": "libnvidia-cfg1-580:amd64",
+    "version": "580.178.04-0ubuntu0.24.04.1"
+  },
+  {
+    "package": "libnvidia-common-580",
+    "version": "580.178.04-0ubuntu0.24.04.1"
+  },
+  {
+    "package": "libnvidia-compute-580:amd64",
+    "version": "580.178.04-0ubuntu0.24.04.1"
+  },
+  {
+    "package": "libnvidia-decode-580:amd64",
+    "version": "580.178.04-0ubuntu0.24.04.1"
+  },
+  {
+    "package": "libnvidia-encode-580:amd64",
+    "version": "580.178.04-0ubuntu0.24.04.1"
+  },
+  {
+    "package": "libnvidia-extra-580:amd64",
+    "version": "580.178.04-0ubuntu0.24.04.1"
+  },
+  {
+    "package": "libnvidia-fbc1-580:amd64",
+    "version": "580.178.04-0ubuntu0.24.04.1"
+  },
+  {
+    "package": "libnvidia-gl-580:amd64",
+    "version": "580.178.04-0ubuntu0.24.04.1"
+  },
+  {
+    "package": "nvidia-compute-utils-580",
+    "version": "580.178.04-0ubuntu0.24.04.1"
+  },
+  {
+    "package": "nvidia-dkms-580",
+    "version": "580.178.04-0ubuntu0.24.04.1"
+  },
+  {
+    "package": "nvidia-driver-580",
+    "version": "580.178.04-0ubuntu0.24.04.1"
+  },
+  {
+    "package": "nvidia-firmware-580-580.178.04",
+    "version": "580.178.04-0ubuntu0.24.04.1"
+  },
+  {
+    "package": "nvidia-kernel-common-580",
+    "version": "580.178.04-0ubuntu0.24.04.1"
+  },
+  {
+    "package": "nvidia-kernel-source-580",
+    "version": "580.178.04-0ubuntu0.24.04.1"
+  },
+  {
+    "package": "nvidia-utils-580",
+    "version": "580.178.04-0ubuntu0.24.04.1"
+  },
+  {
+    "package": "xserver-xorg-video-nvidia-580",
+    "version": "580.178.04-0ubuntu0.24.04.1"
+  }
+]

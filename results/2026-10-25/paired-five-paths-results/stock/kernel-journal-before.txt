@@ -1,0 +1,22 @@
+Oct 25 05:39:59 gpu-vm kernel: pci 0000:00:10.0: [10de:2520] type 00 class 0x030000 PCIe Legacy Endpoint
+Oct 25 05:39:59 gpu-vm kernel: pci 0000:00:10.0: BAR 0 [mem 0xfb000000-0xfbffffff]
+Oct 25 05:39:59 gpu-vm kernel: pci 0000:00:10.0: BAR 1 [mem 0xc200000000-0xc3ffffffff 64bit pref]
+Oct 25 05:39:59 gpu-vm kernel: pci 0000:00:10.0: BAR 3 [mem 0xc460000000-0xc461ffffff 64bit pref]
+Oct 25 05:39:59 gpu-vm kernel: pci 0000:00:10.0: BAR 5 [io  0xf000-0xf07f]
+Oct 25 05:39:59 gpu-vm kernel: pci 0000:00:10.0: ROM [mem 0xfc600000-0xfc67ffff pref]
+Oct 25 05:39:59 gpu-vm kernel: pci 0000:00:10.0: Video device with shadowed ROM at [mem 0x000c0000-0x000dffff]
+Oct 25 05:39:59 gpu-vm kernel: pci 0000:00:10.0: 63.008 Gb/s available PCIe bandwidth, limited by 8.0 GT/s PCIe x8 link at 0000:00:10.0 (capable of 252.048 Gb/s with 16.0 GT/s PCIe x16 link)
+Oct 25 05:39:59 gpu-vm kernel: pci 0000:00:10.0: vgaarb: bridge control possible
+Oct 25 05:39:59 gpu-vm kernel: pci 0000:00:10.0: vgaarb: VGA device added: decodes=io+mem,owns=io+mem,locks=none
+Oct 25 05:39:59 gpu-vm kernel: nvidia: loading out-of-tree module taints kernel.
+Oct 25 05:39:59 gpu-vm kernel: nvidia: module license 'NVIDIA' taints kernel.
+Oct 25 05:39:59 gpu-vm kernel: nvidia: module verification failed: signature and/or required key missing - tainting kernel
+Oct 25 05:39:59 gpu-vm kernel: nvidia: module license taints kernel.
+Oct 25 05:39:59 gpu-vm kernel: nvidia-nvlink: Nvlink Core is being initialized, major device number 238
+Oct 25 05:39:59 gpu-vm kernel: nvidia 0000:00:10.0: vgaarb: VGA decodes changed: olddecodes=io+mem,decodes=none:owns=io+mem
+Oct 25 05:39:59 gpu-vm kernel: NVRM: loading NVIDIA UNIX x86_64 Kernel Module  580.178.04  Tue Jul  7 12:38:21 UTC 2026
+Oct 25 05:39:59 gpu-vm kernel: nvidia-modeset: Loading NVIDIA Kernel Mode Setting Driver for UNIX platforms  580.178.04  Tue Jul  7 12:03:04 UTC 2026
+Oct 25 05:39:59 gpu-vm kernel: [drm] [nvidia-drm] [GPU ID 0x00000010] Loading driver
+Oct 25 05:40:01 gpu-vm kernel: [drm] Initialized nvidia-drm 0.0.0 20160202 for 0000:00:10.0 on minor 1
+Oct 25 05:40:01 gpu-vm kernel: nvidia 0000:00:10.0: [drm] Cannot find any crtc or sizes
+Oct 25 05:40:01 gpu-vm kernel: nvidia_uvm: module uses symbols nvUvmInterfaceDisableAccessCntr from proprietary module nvidia, inheriting taint.

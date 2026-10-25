@@ -1,0 +1,42 @@
+make: Entering directory '/home/gpuuser/gpu-unlock-ada'
+install -Dm644 -t /usr/lib/firmware/gpu-unlock/610.43.03 /home/gpuuser/.cache/gpu-unlock/assets/booter_load_ga102.bin /home/gpuuser/.cache/gpu-unlock/assets/gsp_ga10x.bin /home/gpuuser/.cache/gpu-unlock/assets/gsp_boot_ga102.bin /home/gpuuser/.cache/gpu-unlock/assets/gsp_boot_desc_ga102.bin /home/gpuuser/.cache/gpu-unlock/assets/v67-ga102-610.43.03.bin /home/gpuuser/.cache/gpu-unlock/assets/booter_load_ad102.bin /home/gpuuser/.cache/gpu-unlock/assets/gsp_boot_ad102.bin /home/gpuuser/.cache/gpu-unlock/assets/gsp_boot_desc_ad102.bin /home/gpuuser/.cache/gpu-unlock/assets/v67-ad102-610.43.03-four-plm.bin
+install -Dm644 /home/gpuuser/.cache/gpu-unlock/assets/NVIDIA-LICENSE /usr/share/licenses/gpu-unlock-firmware/NVIDIA-LICENSE
+install -Dm644 firmware/NOTICE.md /usr/share/licenses/gpu-unlock-firmware/NOTICE.md
+install -Dm644 licenses/GPL-2.0.txt /usr/share/licenses/gpu-unlock-firmware/GPL-2.0.txt
+make: Leaving directory '/home/gpuuser/gpu-unlock-ada'
+filename:       /lib/modules/6.8.0-147-generic/extra/gpu_unlock.ko
+vermagic:       6.8.0-147-generic SMP preempt mod_unload modversions 
+parm:           targets:"all" or comma-separated PCI addresses of supported RTX 4090/GA10x cards; AD103 and AD106 require an exact single address (charp)
+parm:           ga106m_experimental:permit only experimental 10de:2520 with a single exact PCI address (bool)
+parm:           ad103_experimental:permit only the exact 10de:2705 AD103 canary with a single explicit PCI address (bool)
+parm:           ad106_experimental:permit only the exact 10de:2805 AD106 target with a single explicit PCI address; untested on silicon (bool)
+parm:           rtx4090d_experimental:permit experimental RTX 4090 D (10de:2685) targets (bool)
+/scripts/init-top/00-gpu-unlock-experiment "$@"
+[ -e /conf/param.conf ] && . /conf/param.conf
+/scripts/init-top/00_mount_efivarfs "$@"
+[ -e /conf/param.conf ] && . /conf/param.conf
+/scripts/init-top/all_generic_ide "$@"
+[ -e /conf/param.conf ] && . /conf/param.conf
+/scripts/init-top/blacklist "$@"
+[ -e /conf/param.conf ] && . /conf/param.conf
+/scripts/init-top/udev "$@"
+[ -e /conf/param.conf ] && . /conf/param.conf
+/scripts/init-top/framebuffer "$@"
+[ -e /conf/param.conf ] && . /conf/param.conf
+/scripts/init-top/console_setup "$@"
+[ -e /conf/param.conf ] && . /conf/param.conf
+scripts/init-top/00-gpu-unlock-experiment
+usr/lib/firmware/gpu-unlock/610.43.03/v67-ga102-610.43.03.bin
+usr/lib/modules/6.8.0-147-generic/extra/gpu_unlock.ko
+Sourcing file `/etc/default/grub'
+Generating grub configuration file ...
+Found linux image: /boot/vmlinuz-6.8.0-147-generic
+Found initrd image: /boot/initrd.img-6.8.0-147-generic
+Warning: os-prober will not be executed to detect other bootable partitions.
+Systems on them will not be added to the GRUB boot configuration.
+Check GRUB_DISABLE_OS_PROBER documentation entry.
+Adding boot menu entry for UEFI Firmware Settings ...
+done
+/boot/initrd.img-6.8.0-147-generic: OK
+next_entry=gpu-unlock-ga106m
+EXPERIMENT_BOOT_STAGED

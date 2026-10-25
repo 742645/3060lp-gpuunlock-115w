@@ -1,0 +1,75 @@
+{
+  "auto_source": false,
+  "bls": {},
+  "boot": {
+    "backend": "grub",
+    "initramfs": "initramfs-tools"
+  },
+  "devices": [
+    {
+      "architecture": "ampere",
+      "bdf": "0000:00:10.0",
+      "device": 9504,
+      "evidence": {
+        "application": "unverified",
+        "boot": "unverified",
+        "fields": {}
+      },
+      "payload_path": "/var/lib/nvidia-vbios/roms/e32f881baea5e74307ac14a612c3344bfcc9f8b5648245d4cb8da44870fded25.bin",
+      "sha256": "e32f881baea5e74307ac14a612c3344bfcc9f8b5648245d4cb8da44870fded25",
+      "size": 522752,
+      "source_sha256": "e32f881baea5e74307ac14a612c3344bfcc9f8b5648245d4cb8da44870fded25",
+      "structurally_validated": true,
+      "uuid": "GPU-00000000-0000-4000-8000-000000000002",
+      "vendor": 4318
+    }
+  ],
+  "enabled": true,
+  "fallback_entry": "gnulinux-simple-00000000-0000-4000-8000-000000000001",
+  "fallback_files": {
+    "/boot/initrd.img-6.8.0-147-generic": "543b4d9e2605c53a466a7c6bbb5912531e56a918ba041e2d32f06ed3fae29f47",
+    "/boot/vmlinuz-6.8.0-147-generic": "41ba36d860aa0b0cd995f4ca8856d80249b244577e704929b55be13fbd1ebd2f"
+  },
+  "fallback_sha256": "92d9089b9ca0c2f9e2f6339f1057209f14ab482868a4f189ea30747685a1b5cd",
+  "jobs": 2,
+  "normal_boot": {
+    "backend": "grub",
+    "boot_files": {
+      "/boot/initrd.img-6.8.0-147-generic": "543b4d9e2605c53a466a7c6bbb5912531e56a918ba041e2d32f06ed3fae29f47",
+      "/boot/vmlinuz-6.8.0-147-generic": "41ba36d860aa0b0cd995f4ca8856d80249b244577e704929b55be13fbd1ebd2f"
+    },
+    "descriptor_path": "/boot/grub/grub.cfg",
+    "entry": "gnulinux-simple-00000000-0000-4000-8000-000000000001",
+    "kernel": "6.8.0-147-generic",
+    "options": "root=/dev/mapper/ubuntu--vg-ubuntu--lv ro",
+    "sha256": "92d9089b9ca0c2f9e2f6339f1057209f14ab482868a4f189ea30747685a1b5cd"
+  },
+  "schema_version": 1,
+  "sources": [
+    {
+      "p2p_preferred": false,
+      "path": "/var/lib/nvidia-vbios/sources/615.71.09-496ad297395feadba97f8fc2b0334d0b7069de20b3bde086204f5210e7c1047c",
+      "source_hashes": {
+        "kernel-open/common/inc/nv-proto.h": "850baf60acee2a3a6ceca66d86104456716c511bde829d9890984dcf519373e3",
+        "kernel-open/common/inc/nv.h": "ae47af242f37db76255094628d79c31ac0a63906452a71a4df6390f76f7585d2",
+        "kernel-open/nvidia/nv-pci.c": "6a5e39f37d86bd6d09cc5867647ecbc8e240298bc138bf651ad7d9346bc1b1c8",
+        "kernel-open/nvidia/nv-reg.h": "a8bff18c6dbeb7f19f5a5e5bbdd9a211329c7a989bb058ee1573395ffe36264f",
+        "kernel-open/nvidia/nv.c": "ce04946d288cf0251668a2d847acceb2a39af9dac2f13bb005f53759c774dbf7",
+        "kernel-open/nvidia/os-registry.c": "a8a94b6c45380edea23b2207f96c6d72a98b06a223579998caab733490008758",
+        "src/nvidia/arch/nvalloc/unix/src/registry.c": "aaf57cff951cf235a9a1a0a62592a00f1b8f08157a74b4f1b738d8180c908485",
+        "src/nvidia/generated/g_kernel_gsp_nvoc.h": "efac7b363ef50c4a97f91b8395115822b4b7a32d3f6272fa722da7f639217b78",
+        "src/nvidia/generated/g_rmconfig_private.h": "51b147949b07b4db0282f2d13534e5abf1d253a53f9e3f95bdc4da9383c530f0",
+        "src/nvidia/generated/g_rmconfig_util.c": "ab5d3a775d12abee3bf6fb6596eff2ed09a89a735ab105bd8a147b36535ce991",
+        "src/nvidia/inc/kernel/core/prelude.h": "7ac2d63b46ed3143399ea8a40a247ff9f6a865affcaf6f3c033087eb19dd059e",
+        "src/nvidia/inc/kernel/gpu/gsp/gsp_init_args.h": "b6996ab98e25f124ad4526e51bd1ad36d579ce325afb7f9d8a4432db5ddff760",
+        "src/nvidia/src/kernel/gpu/gsp/kernel_gsp.c": "ed6d7020a8a1772bc44608178aa13a77a72b8bf0eabe3293c12bc9d2b122c6c9",
+        "version.mk": "40c9cf4415acd13c8e87e17e15c2fe7ceb1ee0d8a449c52f615ab5d844adda73"
+      },
+      "tree_sha256": "60d2b6a2d005f60ae701992cc548fd4f34442bd5913c59e736b27ec2d22299e9",
+      "version": "615.71.09"
+    }
+  ],
+  "userspace": {
+    "provider": "deb"
+  }
+}

@@ -1,0 +1,17 @@
+BOOT_IMAGE=/vmlinuz-6.8.0-147-generic root=/dev/mapper/ubuntu--vg-ubuntu--lv ro gpu_unlock.targets=0000:00:10.0 gpu_unlock.ga106m_experimental=1
+Oct 25 05:00:41 gpu-vm kernel: pci 0000:00:10.0: entry: plm=0xffffffff ss0=0x88888888 ss1=0x8 wpr2_hi=0x0
+Oct 25 05:00:41 gpu-vm kernel: pci 0000:00:10.0: gpu_unlock: unlock failed (-114)
+retained-unlock-no-new-transaction
+{"gpu": "GPU-00000000-0000-4000-8000-000000000002, NVIDIA GeForce RTX 3060 Laptop GPU, 00000000:00:10.0, 580.178.04, [N/A], 210, 405", "command": "0x20801230", "rates": {"imla0": 0, "fmla16": 0, "dp": 0, "fmla32": 0, "ffma": 0, "imla1": 0, "imla2": 0, "imla3": 0, "imla4": 0}, "meaning": "0=full; 1=half; 2=quarter; higher values are further reductions", "hardware_changes": false}
+build/matched-bench/mma_bench: OK
+build/matched-bench/validate_gemm: OK
+build/matched-bench/gemm_bench: OK
+GPU: NVIDIA GeForce RTX 3060 Laptop GPU, sm_86, PCI 0000:00:10.0
+FP16/FP32: m=256 n=256 k=256 seed=1, 65536 cells, failures=0, max_abs=0
+BF16/FP32: m=256 n=256 k=256 seed=1, 65536 cells, failures=0, max_abs=0
+FP16/FP32: m=64 n=96 k=128 seed=2, 6144 cells, failures=0, max_abs=0
+BF16/FP32: m=64 n=96 k=128 seed=2, 6144 cells, failures=0, max_abs=0
+FP16/FP32: m=127 n=65 k=95 seed=3, 8255 cells, failures=0, max_abs=0
+BF16/FP32: m=127 n=65 k=95 seed=3, 8255 cells, failures=0, max_abs=0
+/boot/initrd.img-6.8.0-147-generic: OK
+PERSISTENT_BOOT_REPEAT_PASSED

@@ -1,0 +1,11 @@
+{
+  "ok": true,
+  "operation": "normalize",
+  "result": {
+    "manifest": "/home/gpuuser/3060lp-work/vix-115w-ampere.bin.json",
+    "output": "/home/gpuuser/3060lp-work/vix-115w-ampere.bin",
+    "schema_version": 1,
+    "sha256": "b184ef3350e144df407664160f13e0e3dfda9e4ad1b0acd73a28f9afcc683039"
+  },
+  "schema_version": 1
+}

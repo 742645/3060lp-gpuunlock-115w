@@ -1,0 +1,114 @@
+{
+  "driver": "580.178.04",
+  "power_cap_W": 80.0,
+  "measurements": [
+    {
+      "mode": "fp16_simt",
+      "n": 2048,
+      "stock_TFLOPS": 11.692662,
+      "unlocked_TFLOPS": 11.656106,
+      "gain_percent": -0.3126405261693277
+    },
+    {
+      "mode": "fp16_simt",
+      "n": 4096,
+      "stock_TFLOPS": 11.584975,
+      "unlocked_TFLOPS": 11.513127,
+      "gain_percent": -0.6201826072132155
+    },
+    {
+      "mode": "fp16_simt",
+      "n": 8192,
+      "stock_TFLOPS": 10.513801,
+      "unlocked_TFLOPS": 10.446377,
+      "gain_percent": -0.6412904334027303
+    },
+    {
+      "mode": "fp16_tensor_fp16acc",
+      "n": 2048,
+      "stock_TFLOPS": 38.697305,
+      "unlocked_TFLOPS": 41.191298,
+      "gain_percent": 6.444875166371422
+    },
+    {
+      "mode": "fp16_tensor_fp16acc",
+      "n": 4096,
+      "stock_TFLOPS": 41.96599,
+      "unlocked_TFLOPS": 41.690939,
+      "gain_percent": -0.6554140626731209
+    },
+    {
+      "mode": "fp16_tensor_fp16acc",
+      "n": 8192,
+      "stock_TFLOPS": 42.341231,
+      "unlocked_TFLOPS": 42.196049,
+      "gain_percent": -0.34288563787858717
+    },
+    {
+      "mode": "fp16_tensor_fp32acc",
+      "n": 2048,
+      "stock_TFLOPS": 24.504806,
+      "unlocked_TFLOPS": 37.490987,
+      "gain_percent": 52.99442484874191
+    },
+    {
+      "mode": "fp16_tensor_fp32acc",
+      "n": 4096,
+      "stock_TFLOPS": 26.589088,
+      "unlocked_TFLOPS": 43.355481,
+      "gain_percent": 63.057420397420174
+    },
+    {
+      "mode": "fp16_tensor_fp32acc",
+      "n": 8192,
+      "stock_TFLOPS": 26.167222,
+      "unlocked_TFLOPS": 41.011077,
+      "gain_percent": 56.726904369137856
+    },
+    {
+      "mode": "fp32_simt",
+      "n": 2048,
+      "stock_TFLOPS": 6.703379,
+      "unlocked_TFLOPS": 6.610799,
+      "gain_percent": -1.381094519644499
+    },
+    {
+      "mode": "fp32_simt",
+      "n": 4096,
+      "stock_TFLOPS": 6.862724,
+      "unlocked_TFLOPS": 6.789595,
+      "gain_percent": -1.0655972759504806
+    },
+    {
+      "mode": "fp32_simt",
+      "n": 8192,
+      "stock_TFLOPS": 8.306732,
+      "unlocked_TFLOPS": 8.244142,
+      "gain_percent": -0.7534852454611496
+    },
+    {
+      "mode": "tf32_tensor_fp32acc",
+      "n": 2048,
+      "stock_TFLOPS": 12.508176,
+      "unlocked_TFLOPS": 20.422661,
+      "gain_percent": 63.27449341934428
+    },
+    {
+      "mode": "tf32_tensor_fp32acc",
+      "n": 4096,
+      "stock_TFLOPS": 13.252538,
+      "unlocked_TFLOPS": 21.610202,
+      "gain_percent": 63.06462958265053
+    },
+    {
+      "mode": "tf32_tensor_fp32acc",
+      "n": 8192,
+      "stock_TFLOPS": 13.260361,
+      "unlocked_TFLOPS": 21.862257,
+      "gain_percent": 64.86924451000995
+    }
+  ],
+  "numerical_failures": 0,
+  "actual_kernel_paths_verified": true,
+  "tensor_fp32_precision": "TF32 multiplication with FP32 accumulation"
+}

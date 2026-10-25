@@ -1,0 +1,20 @@
+#!/bin/sh
+exec cat <<'GPU_VIX_ENTRY'
+menuentry 'GPU Unlock + Vix 115W experiment (615.71.09)' --id gpu-unlock-vix-115w {
+	recordfail
+	load_video
+	gfxmode $linux_gfx_mode
+	insmod gzio
+	if [ x$grub_platform = xxen ]; then insmod xzio; insmod lzopio; fi
+	insmod part_gpt
+	insmod ext2
+	set root='hd0,gpt2'
+	if [ x$feature_platform_search_hint = xy ]; then
+	  search --no-floppy --fs-uuid --set=root --hint-bios=hd0,gpt2 --hint-efi=hd0,gpt2 --hint-baremetal=ahci0,gpt2  00000000-0000-4000-8000-000000000003
+	else
+	  search --no-floppy --fs-uuid --set=root 00000000-0000-4000-8000-000000000003
+	fi
+	linux /nvidia-vbios/vbios-6.8.0-147-generic-8e389e0cc023216b00d7/vmlinuz root=/dev/mapper/ubuntu--vg-ubuntu--lv ro gpu_unlock.targets=0000:00:10.0 gpu_unlock.ga106m_experimental=1
+	initrd /nvidia-vbios/vbios-6.8.0-147-generic-8e389e0cc023216b00d7/initramfs.img
+}
+GPU_VIX_ENTRY

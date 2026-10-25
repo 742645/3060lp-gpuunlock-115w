@@ -1,0 +1,80 @@
+# Upstream checkouts and local experiment output
+/upstream-gpu-unlock-ada/
+/upstream-vix-loader/
+/build/
+/build-*.log
+/tmp/
+/temp/
+/PREUPLOAD_CHECK.md
+/agents.md
+
+# Python environments, caches, packaging and coverage
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
+*.egg-info/
+/dist/
+
+# Local credentials; templates must contain placeholders only
+.env
+.env.*
+!.env.example
+!.env.template
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa
+id_ed25519
+credentials.json
+secrets.json
+
+# Local databases and their journals
+*.db
+*.db-*
+*.sqlite
+*.sqlite-*
+*.sqlite3
+*.sqlite3-*
+
+# CUDA/C/C++ and Linux kernel build products
+*.o
+*.obj
+*.a
+*.so
+*.so.*
+*.dll
+*.exe
+*.ko
+*.ko.*
+*.mod
+*.mod.c
+Module.symvers
+modules.order
+.*.cmd
+
+# Device ROM dumps and locally downloaded firmware
+*.rom
+*.vbios
+
+# Editors and operating-system metadata
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.swp
+*.swo
+*~
+
+# Keep results/ JSONL, CSV, SASS and evidence archives: validation tests use them.
+# Already tracked files remain tracked regardless of these ignore rules.

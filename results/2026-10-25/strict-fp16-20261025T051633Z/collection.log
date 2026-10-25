@@ -1,0 +1,39 @@
+RUN_DIRECTORY=/home/gpuuser/gpu-unlock-ada/build/strict-fp16-bench/20261025T051633Z
+2026-10-25T05:16:33+00:00
+{"gpu": "GPU-00000000-0000-4000-8000-000000000002, NVIDIA GeForce RTX 3060 Laptop GPU, 00000000:00:10.0, 580.178.04, [N/A], 210, 405", "command": "0x20801230", "rates": {"imla0": 0, "fmla16": 0, "dp": 0, "fmla32": 0, "ffma": 0, "imla1": 0, "imla2": 0, "imla3": 0, "imla4": 0}, "meaning": "0=full; 1=half; 2=quarter; higher values are further reductions", "hardware_changes": false}
+build/strict-fp16-bench/20261025T051633Z/gemm_bench: OK
+build/strict-fp16-bench/20261025T051633Z/gemm_bench.cu: OK
+build/matched-bench/mma_bench: OK
+build/matched-bench/validate_gemm: OK
+GPU: NVIDIA GeForce RTX 3060 Laptop GPU, sm_86, PCI 0000:00:10.0
+FP16/FP32: m=256 n=256 k=256 seed=1, 65536 cells, failures=0, max_abs=0
+BF16/FP32: m=256 n=256 k=256 seed=1, 65536 cells, failures=0, max_abs=0
+FP16/FP32: m=64 n=96 k=128 seed=2, 6144 cells, failures=0, max_abs=0
+BF16/FP32: m=64 n=96 k=128 seed=2, 6144 cells, failures=0, max_abs=0
+FP16/FP32: m=127 n=65 k=95 seed=3, 8255 cells, failures=0, max_abs=0
+BF16/FP32: m=127 n=65 k=95 seed=3, 8255 cells, failures=0, max_abs=0
+{"mode":"FP16_strict","m":256,"n":256,"k":256,"seed":1,"cells_checked":65536,"failures":0}
+{"mode":"FP16_strict","m":64,"n":96,"k":128,"seed":2,"cells_checked":6144,"failures":0}
+{"mode":"FP16_strict","m":127,"n":65,"k":95,"seed":3,"cells_checked":8255,"failures":0}
+# NVIDIA GeForce RTX 3060 Laptop GPU, 30 SMs, sm_86, iters=5000 reps=5
+mode       best TF/s   all runs
+f16/f16         60.7 47.6/48.4/60.6/60.7/60.6
+f16/f32         60.7 60.7/60.2/60.2/60.2/60.2
+bf16/f32        59.7 59.6/59.6/59.7/59.6/59.6
+s8/s32         119.4 119.3/119.3/119.3/119.4/119.3
+dp4a            29.6 29.6/28.2/28.0/27.7/27.6
+ffma            13.2 13.2/13.1/12.7/12.6/12.6
+{"mode":"FP32_strict","n":2048,"warmups":10,"iterations":20,"reps":5,"times_ms":[2.57387524,2.66501122,2.64816647,2.62195206,2.62241287],"median_TF_s":6.551169,"best_TF_s":6.674709,"cells_checked":4194304,"failures":0}
+{"mode":"FP16_FP32acc","n":2048,"warmups":10,"iterations":20,"reps":5,"times_ms":[0.45132799,0.42429438,0.40161281,0.41149440,0.48501759],"median_TF_s":40.490448,"best_TF_s":42.777195,"cells_checked":4194304,"failures":0}
+{"mode":"FP16_strict","n":2048,"warmups":10,"iterations":20,"reps":5,"compute_type":"CUBLAS_COMPUTE_16F_PEDANTIC","input_type":"FP16","scale_type":"FP16","output_type":"FP16","tensor_cores_allowed":false,"times_ms":[1.33975039,1.45960960,1.46483202,1.46027517,1.45950718],"median_TF_s":11.770181,"best_TF_s":12.823187,"cells_checked":4194304,"failures":0}
+{"mode":"FP32_strict","n":4096,"warmups":10,"iterations":20,"reps":5,"times_ms":[20.86901703,21.88692474,20.94766083,21.43667145,21.17857208],"median_TF_s":6.489529,"best_TF_s":6.585790,"cells_checked":16777216,"failures":0}
+{"mode":"FP16_FP32acc","n":4096,"warmups":10,"iterations":20,"reps":5,"times_ms":[3.34745598,3.37443848,3.33793297,3.32646408,3.33542404],"median_TF_s":41.174869,"best_TF_s":41.316831,"cells_checked":16777216,"failures":0}
+{"mode":"FP16_strict","n":4096,"warmups":10,"iterations":20,"reps":5,"compute_type":"CUBLAS_COMPUTE_16F_PEDANTIC","input_type":"FP16","scale_type":"FP16","output_type":"FP16","tensor_cores_allowed":false,"times_ms":[11.82776337,11.79135971,11.79146271,12.34165726,11.88408356],"median_TF_s":11.620029,"best_TF_s":11.655904,"cells_checked":16777216,"failures":0}
+{"mode":"FP32_strict","n":8192,"warmups":10,"iterations":20,"reps":5,"times_ms":[139.62916260,139.53464355,139.69659424,139.94772949,140.26802979],"median_TF_s":7.870712,"best_TF_s":7.879847,"cells_checked":67108864,"failures":0}
+{"mode":"FP16_FP32acc","n":8192,"warmups":10,"iterations":20,"reps":5,"times_ms":[28.63851624,29.15153809,29.05308228,28.69974976,29.01652527],"median_TF_s":37.892601,"best_TF_s":38.392758,"cells_checked":67108864,"failures":0}
+{"mode":"FP16_strict","n":8192,"warmups":10,"iterations":20,"reps":5,"compute_type":"CUBLAS_COMPUTE_16F_PEDANTIC","input_type":"FP16","scale_type":"FP16","output_type":"FP16","tensor_cores_allowed":false,"times_ms":[103.99283447,104.36331787,104.50140381,104.42961426,104.61475830],"median_TF_s":10.528734,"best_TF_s":10.572956,"cells_checked":67108864,"failures":0}
+build/strict-fp16-bench/20261025T051633Z/gemm_bench: OK
+build/strict-fp16-bench/20261025T051633Z/gemm_bench.cu: OK
+build/matched-bench/mma_bench: OK
+build/matched-bench/validate_gemm: OK
+STRICT_FP16_COLLECTION_PASSED

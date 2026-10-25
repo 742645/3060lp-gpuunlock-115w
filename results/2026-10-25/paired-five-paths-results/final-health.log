@@ -1,0 +1,15 @@
+Sourcing file `/etc/default/grub'
+Sourcing file `/etc/default/grub.d/99-gpu-unlock-ga106m.cfg'
+Generating grub configuration file ...
+Found linux image: /boot/vmlinuz-6.8.0-147-generic
+Found initrd image: /boot/initrd.img-6.8.0-147-generic
+Warning: os-prober will not be executed to detect other bootable partitions.
+Systems on them will not be added to the GRUB boot configuration.
+Check GRUB_DISABLE_OS_PROBER documentation entry.
+Adding boot menu entry for UEFI Firmware Settings ...
+done
+   set default="gpu-unlock-ga106m"
+PERSISTENT_EXPERIMENT_ENABLED
+name, driver_version, temperature.gpu, utilization.gpu [%]
+NVIDIA GeForce RTX 3060 Laptop GPU, 580.178.04, 35, 0 %
+/boot/initrd.img-6.8.0-147-generic: OK

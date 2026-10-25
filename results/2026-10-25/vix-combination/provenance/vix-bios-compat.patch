@@ -1,0 +1,46 @@
+diff --git a/src/nvidia_vbios/lifecycle/portable.py b/src/nvidia_vbios/lifecycle/portable.py
+index a6f1876..db73de1 100644
+--- a/src/nvidia_vbios/lifecycle/portable.py
++++ b/src/nvidia_vbios/lifecycle/portable.py
+@@ -24,6 +24,18 @@ def portable_config(raw):
+     return isinstance(raw.get('boot'), dict) and raw['boot'].get('backend') in ('grub', 'systemd-boot', 'uki')
+ 
+ 
++def secure_boot_state(ops, root):
++    """Accept mokutil exit 1 only for its exact non-EFI diagnostic on a BIOS boot."""
++    result = ops._run(['mokutil', '--sb-state'], allow_failure=True)
++    state = (result.stdout + result.stderr).decode().strip().lower()
++    bios_message = 'efi variables are not supported on this system'
++    if result.returncode:
++        if not (result.returncode == 1 and state == bios_message
++                and not (Path(root) / 'sys/firmware/efi').exists()):
++            raise LifecycleError('cannot determine Secure Boot state: mokutil failed')
++    return state
++
++
+ class BootOperations:
+     """Normalize boot selection; delegate all source/module operations unchanged."""
+     def __init__(self, base, root, raw):
+@@ -101,7 +113,7 @@ class BootOperations:
+                         raise LifecycleError('global VBIOS activation conflicts with isolated boot images')
+         for name in ('make', 'modinfo', 'depmod', 'mokutil'):
+             checked_path(Path(self.base.command_path(name)).resolve(), self.root)
+-        state = self.base._text(['mokutil', '--sb-state']).lower()
++        state = secure_boot_state(self.base, self.root)
+         if 'secureboot enabled' in state or 'secure boot enabled' in state:
+             self.base._signing_paths(kernel, config)
+         elif not any(v in state for v in ('secureboot disabled', 'secure boot disabled', 'efi variables are not supported')):
+diff --git a/src/nvidia_vbios/lifecycle/system.py b/src/nvidia_vbios/lifecycle/system.py
+index 61adf38..e5305de 100644
+--- a/src/nvidia_vbios/lifecycle/system.py
++++ b/src/nvidia_vbios/lifecycle/system.py
+@@ -459,7 +459,8 @@ class SystemOperations:
+                 ("version", "vermagic", "srcversion", "vbios_override_per_gpu", "vbios_override_param_bytes", "signer")}
+ 
+     def sign(self, modules, kernel, config):
+-        state = self._text(["mokutil", "--sb-state"]).lower()
++        from .portable import secure_boot_state
++        state = secure_boot_state(self, getattr(self, "filesystem_root", Path("/")))
+         if "secureboot enabled" not in state and "secure boot enabled" not in state:
+             if not any(value in state for value in ("secureboot disabled", "secure boot disabled", "efi variables are not supported")):
+                 raise LifecycleError("cannot determine Secure Boot state before module signing")

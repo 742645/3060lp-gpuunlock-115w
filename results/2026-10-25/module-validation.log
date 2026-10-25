@@ -1,0 +1,64 @@
+GPU_UNLOCK_REQUIRE_INPUTS=1 make test
+make[1]: Entering directory '/home/gpuuser/gpu-unlock-ada'
+GPU_UNLOCK_ASSETS="/home/gpuuser/.cache/gpu-unlock/assets" GPU_UNLOCK_NVIDIA_SOURCE="/home/gpuuser/.cache/gpu-unlock/assets.src/NVIDIA-kernel-module-source-610.43.03" python3 -m unittest discover -s tests -v
+test_ampere_source_cannot_be_renamed_into_ada (test_ada_assets.AdaAssetTests.test_ampere_source_cannot_be_renamed_into_ada) ... ok
+test_default_ampere_outputs_stay_pinned (test_ada_assets.AdaAssetTests.test_default_ampere_outputs_stay_pinned) ... ok
+test_real_ada_geometry_and_descriptor (test_ada_assets.AdaAssetTests.test_real_ada_geometry_and_descriptor) ... ok
+test_source_mutation_rejected_before_output (test_ada_assets.AdaAssetTests.test_source_mutation_rejected_before_output) ... ok
+test_unknown_profile_is_rejected (test_ada_assets.ProfileValidationTests.test_unknown_profile_is_rejected) ... ok
+test_code_range_preserves_addresses_and_excludes_dmem (test_debug_decoder.DebugDecoderTests.test_code_range_preserves_addresses_and_excludes_dmem) ... skipped 'optional offline decoder requires PyCryptodome'
+test_standard_aes_control (test_debug_decoder.DebugDecoderTests.test_standard_aes_control) ... skipped 'optional offline decoder requires PyCryptodome'
+test_wrong_key_never_reads_firmware_or_creates_outputs (test_debug_decoder.DebugDecoderTests.test_wrong_key_never_reads_firmware_or_creates_outputs) ... skipped 'optional offline decoder requires PyCryptodome'
+test_key_file_formats_and_rejection (test_debug_decoder.DebugKeyInputTests.test_key_file_formats_and_rejection) ... ok
+test_ad102_exact_payload_and_fill (test_firmware.FirmwareTests.test_ad102_exact_payload_and_fill) ... ok
+test_ad102_ordered_arguments_marker_and_cleanup (test_firmware.FirmwareTests.test_ad102_ordered_arguments_marker_and_cleanup) ... ok
+test_firmware_install_includes_both_payloads_and_licenses (test_firmware.FirmwareTests.test_firmware_install_includes_both_payloads_and_licenses) ... make[2]: Entering directory '/home/gpuuser/gpu-unlock-ada'
+make[2]: Leaving directory '/home/gpuuser/gpu-unlock-ada'
+ok
+test_per_chip_dmem_offsets_and_ga102_compatibility (test_firmware.FirmwareTests.test_per_chip_dmem_offsets_and_ga102_compatibility) ... ok
+test_runtime_pins_match_manifest (test_firmware_pins.FirmwarePinTests.test_runtime_pins_match_manifest) ... ok
+test_firmware_package_contains_pinned_ada_assets_and_payload (test_packaging.PackageTests.test_firmware_package_contains_pinned_ada_assets_and_payload) ... make[2]: Entering directory '/home/gpuuser/gpu-unlock-ada'
+make[2]: Leaving directory '/home/gpuuser/gpu-unlock-ada'
+ok
+test_install_uses_standard_paths (test_packaging.PackageTests.test_install_uses_standard_paths) ... make[2]: Entering directory '/home/gpuuser/gpu-unlock-ada'
+make[2]: Leaving directory '/home/gpuuser/gpu-unlock-ada'
+ok
+test_native_versions_match (test_packaging.PackageTests.test_native_versions_match) ... ok
+test_pkgbuild_pins_match_manifest (test_packaging.PackageTests.test_pkgbuild_pins_match_manifest) ... ok
+test_v67_payload_matches_pin (test_packaging.PackageTests.test_v67_payload_matches_pin) ... ok
+test_components (test_release.ComponentTests.test_components) ... ok
+test_missing_assets_are_an_explicit_skip (test_release.CoveragePreflightTests.test_missing_assets_are_an_explicit_skip) ... ok
+test_required_missing_assets_fail (test_release.CoveragePreflightTests.test_required_missing_assets_fail) ... ok
+test_required_missing_source_fails (test_release.CoveragePreflightTests.test_required_missing_source_fails) ... ok
+test_ad102_full_transactions (test_release.PinnedTransactionTests.test_ad102_full_transactions) ... ok
+test_ga102_full_transactions (test_release.PinnedTransactionTests.test_ga102_full_transactions) ... ok
+test_shared_gsp_sections (test_release.PinnedTransactionTests.test_shared_gsp_sections) ... ok
+test_failed_getter_does_not_report_zero_as_full_speed (test_sm_rates.SmRateProbeTests.test_failed_getter_does_not_report_zero_as_full_speed) ... ok
+test_only_alloc_and_the_one_public_getter_are_sent (test_sm_rates.SmRateProbeTests.test_only_alloc_and_the_one_public_getter_are_sent) ... ok
+test_wrong_identity_prevents_any_device_open (test_sm_rates.SmRateProbeTests.test_wrong_identity_prevents_any_device_open) ... ok
+
+----------------------------------------------------------------------
+Ran 29 tests in 6.902s
+
+OK (skipped=3)
+make[1]: Leaving directory '/home/gpuuser/gpu-unlock-ada'
+make: Entering directory '/home/gpuuser/gpu-unlock-ada/kernel/gpu_unlock'
+make -C "/lib/modules/6.8.0-147-generic/build" M="/home/gpuuser/gpu-unlock-ada/kernel/gpu_unlock" modules
+make[1]: Entering directory '/usr/src/linux-headers-6.8.0-147-generic'
+warning: the compiler differs from the one used to build the kernel
+  The kernel was built by: x86_64-linux-gnu-gcc-13 (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0
+  You are using:           gcc-13 (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0
+  CC [M]  /home/gpuuser/gpu-unlock-ada/kernel/gpu_unlock/main.o
+  CC [M]  /home/gpuuser/gpu-unlock-ada/kernel/gpu_unlock/gfw_eval.o
+  CC [M]  /home/gpuuser/gpu-unlock-ada/kernel/gpu_unlock/prep_610.o
+  CC [M]  /home/gpuuser/gpu-unlock-ada/kernel/gpu_unlock/layout_610.o
+  CC [M]  /home/gpuuser/gpu-unlock-ada/kernel/gpu_unlock/vbios_610.o
+  CC [M]  /home/gpuuser/gpu-unlock-ada/kernel/gpu_unlock/unlock_610.o
+  LD [M]  /home/gpuuser/gpu-unlock-ada/kernel/gpu_unlock/gpu_unlock.o
+  MODPOST /home/gpuuser/gpu-unlock-ada/kernel/gpu_unlock/Module.symvers
+  CC [M]  /home/gpuuser/gpu-unlock-ada/kernel/gpu_unlock/gpu_unlock.mod.o
+  LD [M]  /home/gpuuser/gpu-unlock-ada/kernel/gpu_unlock/gpu_unlock.ko
+  BTF [M] /home/gpuuser/gpu-unlock-ada/kernel/gpu_unlock/gpu_unlock.ko
+Skipping BTF generation for /home/gpuuser/gpu-unlock-ada/kernel/gpu_unlock/gpu_unlock.ko due to unavailability of vmlinux
+make[1]: Leaving directory '/usr/src/linux-headers-6.8.0-147-generic'
+make: Leaving directory '/home/gpuuser/gpu-unlock-ada/kernel/gpu_unlock'

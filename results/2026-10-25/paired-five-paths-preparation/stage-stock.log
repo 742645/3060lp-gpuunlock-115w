@@ -1,0 +1,13 @@
+Sourcing file `/etc/default/grub'
+Generating grub configuration file ...
+Found linux image: /boot/vmlinuz-6.8.0-147-generic
+Found initrd image: /boot/initrd.img-6.8.0-147-generic
+Warning: os-prober will not be executed to detect other bootable partitions.
+Systems on them will not be added to the GRUB boot configuration.
+Check GRUB_DISABLE_OS_PROBER documentation entry.
+Adding boot menu entry for UEFI Firmware Settings ...
+done
+Standard boot selected. Future boots will not run the unlock transaction.
+Existing overrides survived a VM warm reboot in this experiment; clearing them may require a physical GPU power cycle, then a stock boot and rate verification.
+   set default="0"
+STOCK_BOOT_STAGED_REQUIRES_GPU_RESET_AND_RATE_CHECK

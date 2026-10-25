@@ -1,0 +1,62 @@
+{
+  "ok": true,
+  "operation": "driver",
+  "result": {
+    "capabilities": {
+      "binary_loader_backport_needed": false,
+      "common_boot_argument_lifecycle": true,
+      "explicit_chip_scope": [
+        "TU102",
+        "TU104",
+        "TU106",
+        "TU116",
+        "TU117",
+        "GA100",
+        "GA102",
+        "GA103",
+        "GA104",
+        "GA106",
+        "GA107",
+        "AD102",
+        "AD103",
+        "AD104",
+        "AD106",
+        "AD107",
+        "GB202",
+        "GB203",
+        "GB205",
+        "GB206",
+        "GB207"
+      ],
+      "gsp_vbios_override_abi": true,
+      "module_metadata": {
+        "vbios_override_param_bytes": "4094",
+        "vbios_override_per_gpu": "1"
+      },
+      "native_per_device_binary_loader": true,
+      "registry_string_max_bytes": 4094
+    },
+    "reasons": [],
+    "schema_version": 1,
+    "source": "/home/gpuuser/open-gpu-kernel-modules-615.71.09",
+    "source_hashes": {
+      "kernel-open/common/inc/nv-proto.h": "850baf60acee2a3a6ceca66d86104456716c511bde829d9890984dcf519373e3",
+      "kernel-open/common/inc/nv.h": "ae47af242f37db76255094628d79c31ac0a63906452a71a4df6390f76f7585d2",
+      "kernel-open/nvidia/nv-pci.c": "6a5e39f37d86bd6d09cc5867647ecbc8e240298bc138bf651ad7d9346bc1b1c8",
+      "kernel-open/nvidia/nv-reg.h": "a8bff18c6dbeb7f19f5a5e5bbdd9a211329c7a989bb058ee1573395ffe36264f",
+      "kernel-open/nvidia/nv.c": "ce04946d288cf0251668a2d847acceb2a39af9dac2f13bb005f53759c774dbf7",
+      "kernel-open/nvidia/os-registry.c": "a8a94b6c45380edea23b2207f96c6d72a98b06a223579998caab733490008758",
+      "src/nvidia/arch/nvalloc/unix/src/registry.c": "aaf57cff951cf235a9a1a0a62592a00f1b8f08157a74b4f1b738d8180c908485",
+      "src/nvidia/generated/g_kernel_gsp_nvoc.h": "efac7b363ef50c4a97f91b8395115822b4b7a32d3f6272fa722da7f639217b78",
+      "src/nvidia/generated/g_rmconfig_private.h": "51b147949b07b4db0282f2d13534e5abf1d253a53f9e3f95bdc4da9383c530f0",
+      "src/nvidia/generated/g_rmconfig_util.c": "ab5d3a775d12abee3bf6fb6596eff2ed09a89a735ab105bd8a147b36535ce991",
+      "src/nvidia/inc/kernel/core/prelude.h": "7ac2d63b46ed3143399ea8a40a247ff9f6a865affcaf6f3c033087eb19dd059e",
+      "src/nvidia/inc/kernel/gpu/gsp/gsp_init_args.h": "b6996ab98e25f124ad4526e51bd1ad36d579ce325afb7f9d8a4432db5ddff760",
+      "src/nvidia/src/kernel/gpu/gsp/kernel_gsp.c": "ed6d7020a8a1772bc44608178aa13a77a72b8bf0eabe3293c12bc9d2b122c6c9",
+      "version.mk": "40c9cf4415acd13c8e87e17e15c2fe7ceb1ee0d8a449c52f615ab5d844adda73"
+    },
+    "supported": true,
+    "version": "615.71.09"
+  },
+  "schema_version": 1
+}

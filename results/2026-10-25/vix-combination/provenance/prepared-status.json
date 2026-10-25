@@ -1,0 +1,145 @@
+{
+  "activation_config_sha256": "3524814f79dac85166606c16ad329ab30359480e6ed78f6274d2b9bde3188fca",
+  "activation_generation": 4,
+  "application_verification": "unverified",
+  "base_sha256": "e491c4d68b3394da4d62a2c1a8a7fef958abcde46da01ffef48560967a70948c",
+  "boot_verification": "unverified",
+  "configuration_sha256": "2247d49de59f8441cb200d4d453c370b3874d4ec345cbc4ed5d3be3cd517aaee",
+  "deployment": [
+    {
+      "after_sha256": "5e5fa3eee988625032390f915ff2ba1a4f5888d264f6c0e38102ea02d2583d7e",
+      "backup": "/var/lib/nvidia-vbios/lifecycle/transactions/6.8.0-147-generic-1792909099826906437/backups/0",
+      "before_sha256": "54ecdf61d06b2bec8f7eb12e2c98c1aa4fce16f8678828f08c944fcd80284fff",
+      "mode": 420,
+      "path": "/usr/lib/modules/6.8.0-147-generic/updates/vbios-override/nvidia.ko"
+    },
+    {
+      "after_sha256": "74b4f8a0607f1397c8537b33b368632a5674536d721f24b1bc798a8403914f92",
+      "backup": "/var/lib/nvidia-vbios/lifecycle/transactions/6.8.0-147-generic-1792909099826906437/backups/1",
+      "before_sha256": "82c44c2514ecb664979e2f8b28cc2e657965b02c4c5a773a30ba0f66f8ce6340",
+      "mode": 420,
+      "path": "/usr/lib/modules/6.8.0-147-generic/updates/vbios-override/nvidia-modeset.ko"
+    },
+    {
+      "after_sha256": "75cdc6e0de9af09dee30e9b362359a3b0caa2c0d8def223bfa643b7df9d1b75f",
+      "backup": "/var/lib/nvidia-vbios/lifecycle/transactions/6.8.0-147-generic-1792909099826906437/backups/2",
+      "before_sha256": "d6e8ba967f84830b54770c16728c7a8a56f5823948299cacad071bd8e03c09c9",
+      "mode": 420,
+      "path": "/usr/lib/modules/6.8.0-147-generic/updates/vbios-override/nvidia-drm.ko"
+    },
+    {
+      "after_sha256": "df9bd18af4e8259ab63bcdbd356569bfe0cd5e258868ea3e6e5c65cc33100b4b",
+      "backup": "/var/lib/nvidia-vbios/lifecycle/transactions/6.8.0-147-generic-1792909099826906437/backups/3",
+      "before_sha256": "43ef791bfb94858c0663229b297794a283e325ca3e0f9ebda9d92ecb13ad4238",
+      "mode": 420,
+      "path": "/usr/lib/modules/6.8.0-147-generic/updates/vbios-override/nvidia-uvm.ko"
+    },
+    {
+      "after_sha256": "d86cd8e8919c6ccf00612a5579875588af017cd6de4fe750c6ac56bfac424d23",
+      "backup": "/var/lib/nvidia-vbios/lifecycle/transactions/6.8.0-147-generic-1792909099826906437/backups/4",
+      "before_sha256": "5efa189bea64d1ca40dd420cb7f64f046252f201793532dfccd11762ab18ade6",
+      "mode": 420,
+      "path": "/usr/lib/modules/6.8.0-147-generic/updates/vbios-override/nvidia-peermem.ko"
+    },
+    {
+      "after_sha256": "e32f881baea5e74307ac14a612c3344bfcc9f8b5648245d4cb8da44870fded25",
+      "backup": null,
+      "before_sha256": null,
+      "mode": 420,
+      "path": "/usr/lib/firmware/nvidia/615.71.09/vbios-override/0000:00:10.0-e32f881baea5e743.bin"
+    },
+    {
+      "after_sha256": "41ba36d860aa0b0cd995f4ca8856d80249b244577e704929b55be13fbd1ebd2f",
+      "backup": null,
+      "before_sha256": null,
+      "mode": 420,
+      "path": "/boot/nvidia-vbios/vbios-6.8.0-147-generic-8e389e0cc023216b00d7/vmlinuz"
+    },
+    {
+      "after_sha256": "513204a7a8cf76e17c27817dac22b4d32ba5a308b8dc3ad1611c0c63b396bf5e",
+      "backup": null,
+      "before_sha256": null,
+      "mode": 384,
+      "path": "/boot/nvidia-vbios/vbios-6.8.0-147-generic-8e389e0cc023216b00d7/initramfs.img"
+    },
+    {
+      "after_sha256": "f6f2d4ef69e0237c57a1df0d790174d7fed8baaada9590b152c643487006e212",
+      "backup": null,
+      "before_sha256": null,
+      "mode": 420,
+      "path": "/boot/grub/nvidia-vbios-entries/vbios-6.8.0-147-generic-8e389e0cc023216b00d7.cfg"
+    }
+  ],
+  "driver": "615.71.09",
+  "enrollment_evidence": {
+    "0000:00:10.0": {
+      "application": "unverified",
+      "boot": "unverified",
+      "fields": {}
+    }
+  },
+  "entry": "vbios-6.8.0-147-generic-8e389e0cc023216b00d7",
+  "finished": 1792909324.4991891,
+  "force_driver_sha256": "e5bf7d0ee30e24d3adcdf45f407edc006e01c40f13100b34f44a5682278e25de",
+  "generation_sha256": "8e389e0cc023216b00d70b0af86a9e7c36bc0a8745a195920c0c31e812a0f6f1",
+  "kernel": "6.8.0-147-generic",
+  "marker": "VBIOS_READY",
+  "module_metadata": {
+    "nvidia-drm.ko": {
+      "signer": "",
+      "srcversion": "9DA117AD1DFAE8171257C3B",
+      "vbios_override_param_bytes": "",
+      "vbios_override_per_gpu": "",
+      "vermagic": "6.8.0-147-generic SMP preempt mod_unload modversions",
+      "version": "615.71.09"
+    },
+    "nvidia-modeset.ko": {
+      "signer": "",
+      "srcversion": "CCBAFC541F2389A746AE374",
+      "vbios_override_param_bytes": "",
+      "vbios_override_per_gpu": "",
+      "vermagic": "6.8.0-147-generic SMP preempt mod_unload modversions",
+      "version": "615.71.09"
+    },
+    "nvidia-peermem.ko": {
+      "signer": "",
+      "srcversion": "890AFFA635D55BDFFC7CFAE",
+      "vbios_override_param_bytes": "",
+      "vbios_override_per_gpu": "",
+      "vermagic": "6.8.0-147-generic SMP preempt mod_unload modversions",
+      "version": "615.71.09"
+    },
+    "nvidia-uvm.ko": {
+      "signer": "",
+      "srcversion": "2CA5427BFF504A8F70EEAE8",
+      "vbios_override_param_bytes": "",
+      "vbios_override_per_gpu": "",
+      "vermagic": "6.8.0-147-generic SMP preempt mod_unload modversions",
+      "version": "615.71.09"
+    },
+    "nvidia.ko": {
+      "signer": "",
+      "srcversion": "17A3F58BBC1A2AA01048F1D",
+      "vbios_override_param_bytes": "4094",
+      "vbios_override_per_gpu": "1",
+      "vermagic": "6.8.0-147-generic SMP preempt mod_unload modversions",
+      "version": "615.71.09"
+    }
+  },
+  "module_parameters": {
+    "NVreg_RegistryBinaryFilePerDevice": "pci=0000:00:10.0;RmLinuxVbiosOverrideImage=615.71.09/vbios-override/0000:00:10.0-e32f881baea5e743.bin",
+    "NVreg_RegistryDwords": "RmLinuxVbiosOverrideDisable=0",
+    "NVreg_RegistryDwordsPerDevice": "pci=0000:00:10.0;RmLinuxVbiosOverride=2;RmLinuxVbiosOverrideSize=522752"
+  },
+  "retention": {
+    "keep": 3,
+    "reason": "awaiting-matching-running-ready",
+    "removed": [],
+    "retained": 2,
+    "state": "deferred",
+    "warnings": []
+  },
+  "runtime_tested": false,
+  "source_manifest": "/var/lib/nvidia-vbios/lifecycle/transactions/6.8.0-147-generic-1792909099826906437/source-manifest.json",
+  "state": "ready"
+}

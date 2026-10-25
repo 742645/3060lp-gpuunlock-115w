@@ -1,0 +1,12 @@
+6.8.0-147-generic
+ 05:40:46 up 0 min,  1 user,  load average: 0.33, 0.11, 0.04
+BOOT_IMAGE=/vmlinuz-6.8.0-147-generic root=/dev/mapper/ubuntu--vg-ubuntu--lv ro
+name, uuid, driver_version, temperature.gpu, utilization.gpu [%]
+NVIDIA GeForce RTX 3060 Laptop GPU, GPU-00000000-0000-4000-8000-000000000002, 580.178.04, 30, 0 %
+{"gpu": "GPU-00000000-0000-4000-8000-000000000002, NVIDIA GeForce RTX 3060 Laptop GPU, 00000000:00:10.0, 580.178.04, [N/A], 210, 405", "command": "0x20801230", "rates": {"imla0": 0, "fmla16": 0, "dp": 0, "fmla32": 1, "ffma": 0, "imla1": 0, "imla2": 0, "imla3": 0, "imla4": 1}, "meaning": "0=full; 1=half; 2=quarter; higher values are further reductions", "hardware_changes": false}
+-rw-rw-r-- 1 gpuuser gpuuser 0 Oct 25 05:28 build/paired-five-paths/FROZEN
+build/paired-five-paths/paired_gemm: OK
+build/paired-five-paths/paired_gemm.cu: OK
+/lib/x86_64-linux-gnu/libcublas.so.12: OK
+/lib/x86_64-linux-gnu/libcublasLt.so.12: OK
+/lib/x86_64-linux-gnu/libcupti.so.12: OK

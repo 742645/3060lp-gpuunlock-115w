@@ -1,0 +1,1 @@
+BOOT_IMAGE=/nvidia-vbios/vbios-6.8.0-147-generic-8e389e0cc023216b00d7/vmlinuz root=/dev/mapper/ubuntu--vg-ubuntu--lv ro gpu_unlock.targets=0000:00:10.0 gpu_unlock.ga106m_experimental=1

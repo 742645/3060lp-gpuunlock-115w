@@ -1,0 +1,14 @@
+{
+  "stock": {
+    "samples": 539,
+    "observed_max_temperature_C": 53.0,
+    "observed_max_power_W": 80.13,
+    "observed_max_sm_MHz": 2002.0
+  },
+  "unlocked": {
+    "samples": 482,
+    "observed_max_temperature_C": 54.0,
+    "observed_max_power_W": 80.14,
+    "observed_max_sm_MHz": 1987.0
+  }
+}

@@ -1,0 +1,2 @@
+uuid, name, pci.bus_id, driver_version, power.limit [W], clocks.max.sm [MHz], memory.total [MiB]
+GPU-00000000-0000-4000-8000-000000000002, NVIDIA GeForce RTX 3060 Laptop GPU, 00000000:00:10.0, 580.178.04, [N/A], 2100 MHz, 6144 MiB

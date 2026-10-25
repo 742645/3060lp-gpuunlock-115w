@@ -1,0 +1,10 @@
+{
+  "order": {
+    "00-gpu-unlock-experiment": 0,
+    "udev": 5,
+    "vbios_override": 4
+  },
+  "payload_sha256": "b184ef3350e144df407664160f13e0e3dfda9e4ad1b0acd73a28f9afcc683039",
+  "nvidia_version": "615.71.09",
+  "nvidia_per_gpu_patch": true
+}

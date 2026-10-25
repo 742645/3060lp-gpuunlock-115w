@@ -1,0 +1,60 @@
+Oct 25 06:27:10 gpu-vm kernel: Command line: BOOT_IMAGE=/nvidia-vbios/vbios-6.8.0-147-generic-8e389e0cc023216b00d7/vmlinuz root=/dev/mapper/ubuntu--vg-ubuntu--lv ro gpu_unlock.targets=0000:00:10.0 gpu_unlock.ga106m_experimental=1
+Oct 25 06:27:10 gpu-vm kernel: Kernel command line: BOOT_IMAGE=/nvidia-vbios/vbios-6.8.0-147-generic-8e389e0cc023216b00d7/vmlinuz root=/dev/mapper/ubuntu--vg-ubuntu--lv ro gpu_unlock.targets=0000:00:10.0 gpu_unlock.ga106m_experimental=1
+Oct 25 06:27:10 gpu-vm kernel: pci 0000:00:10.0: [10de:2520] type 00 class 0x030000 PCIe Legacy Endpoint
+Oct 25 06:27:10 gpu-vm kernel: pci 0000:00:10.0: BAR 0 [mem 0xfb000000-0xfbffffff]
+Oct 25 06:27:10 gpu-vm kernel: pci 0000:00:10.0: BAR 1 [mem 0xc200000000-0xc3ffffffff 64bit pref]
+Oct 25 06:27:10 gpu-vm kernel: pci 0000:00:10.0: BAR 3 [mem 0xc460000000-0xc461ffffff 64bit pref]
+Oct 25 06:27:10 gpu-vm kernel: pci 0000:00:10.0: BAR 5 [io  0xf000-0xf07f]
+Oct 25 06:27:10 gpu-vm kernel: pci 0000:00:10.0: ROM [mem 0xfc600000-0xfc67ffff pref]
+Oct 25 06:27:10 gpu-vm kernel: pci 0000:00:10.0: Video device with shadowed ROM at [mem 0x000c0000-0x000dffff]
+Oct 25 06:27:10 gpu-vm kernel: pci 0000:00:10.0: 63.008 Gb/s available PCIe bandwidth, limited by 8.0 GT/s PCIe x8 link at 0000:00:10.0 (capable of 126.016 Gb/s with 8.0 GT/s PCIe x16 link)
+Oct 25 06:27:10 gpu-vm kernel: pci 0000:00:10.0: vgaarb: bridge control possible
+Oct 25 06:27:10 gpu-vm kernel: pci 0000:00:10.0: vgaarb: VGA device added: decodes=io+mem,owns=io+mem,locks=none
+Oct 25 06:27:10 gpu-vm gpu_unlock_experiment: begin before udev
+Oct 25 06:27:10 gpu-vm kernel: gpu_unlock: loading out-of-tree module taints kernel.
+Oct 25 06:27:10 gpu-vm kernel: gpu_unlock: module verification failed: signature and/or required key missing - tainting kernel
+Oct 25 06:27:10 gpu-vm kernel: pci 0000:00:10.0: asset request: gpu-unlock/610.43.03/gsp_ga10x.bin
+Oct 25 06:27:10 gpu-vm kernel: pci 0000:00:10.0: asset result: gpu-unlock/610.43.03/gsp_ga10x.bin error=0 bytes=84277400
+Oct 25 06:27:10 gpu-vm kernel: pci 0000:00:10.0: asset cache cleanup: gpu-unlock/610.43.03/gsp_ga10x.bin devres_released=1
+Oct 25 06:27:10 gpu-vm kernel: pci 0000:00:10.0: driver probe resources: phase=entry empty=1
+Oct 25 06:27:10 gpu-vm kernel: pci 0000:00:10.0: asset request: gpu-unlock/610.43.03/v67-ga102-610.43.03.bin
+Oct 25 06:27:10 gpu-vm kernel: pci 0000:00:10.0: asset result: gpu-unlock/610.43.03/v67-ga102-610.43.03.bin error=0 bytes=64000
+Oct 25 06:27:10 gpu-vm kernel: pci 0000:00:10.0: asset cache cleanup: gpu-unlock/610.43.03/v67-ga102-610.43.03.bin devres_released=1
+Oct 25 06:27:10 gpu-vm kernel: pci 0000:00:10.0: asset request: gpu-unlock/610.43.03/gsp_boot_ga102.bin
+Oct 25 06:27:10 gpu-vm kernel: pci 0000:00:10.0: asset result: gpu-unlock/610.43.03/gsp_boot_ga102.bin error=0 bytes=24576
+Oct 25 06:27:10 gpu-vm kernel: pci 0000:00:10.0: asset cache cleanup: gpu-unlock/610.43.03/gsp_boot_ga102.bin devres_released=1
+Oct 25 06:27:10 gpu-vm kernel: pci 0000:00:10.0: asset request: gpu-unlock/610.43.03/gsp_boot_desc_ga102.bin
+Oct 25 06:27:10 gpu-vm kernel: pci 0000:00:10.0: asset result: gpu-unlock/610.43.03/gsp_boot_desc_ga102.bin error=0 bytes=84
+Oct 25 06:27:10 gpu-vm kernel: pci 0000:00:10.0: asset cache cleanup: gpu-unlock/610.43.03/gsp_boot_desc_ga102.bin devres_released=1
+Oct 25 06:27:10 gpu-vm kernel: pci 0000:00:10.0: asset geometry: image=84226048 signature=4096 boot=24576 code=0x1800 data=0x800 manifest=0x0 parse=0
+Oct 25 06:27:10 gpu-vm kernel: pci 0000:00:10.0: asset request: gpu-unlock/610.43.03/booter_load_ga102.bin
+Oct 25 06:27:10 gpu-vm kernel: pci 0000:00:10.0: asset result: gpu-unlock/610.43.03/booter_load_ga102.bin error=0 bytes=61256
+Oct 25 06:27:10 gpu-vm kernel: pci 0000:00:10.0: asset cache cleanup: gpu-unlock/610.43.03/booter_load_ga102.bin devres_released=1
+Oct 25 06:27:10 gpu-vm kernel: pci 0000:00:10.0: claim: power=0 pm_cap=0x60 flags=0x0
+Oct 25 06:27:10 gpu-vm kernel: pci 0000:00:10.0: claim: command=0x103 capability=0x112c8de1 BAR_mask=0x4b
+Oct 25 06:27:10 gpu-vm kernel: pci 0000:00:10.0: layout inputs: fb_mb=0x1800 vga=0x1 mmu_plm=0x45cb8f mmu_lo=0x100000 mmu_hi=0x16ffff0 image=84226048 boot=24576
+Oct 25 06:27:10 gpu-vm kernel: pci 0000:00:10.0: layout mmu: lo=0x10000000 hi=0x16ffff000 hi_exclusive=0x170000000 constrain=0
+Oct 25 06:27:10 gpu-vm kernel: pci 0000:00:10.0: mmu lock ignored: high address is not the FB top
+Oct 25 06:27:10 gpu-vm kernel: pci 0000:00:10.0: layout decoded: fb=0x180000000 vga=0x17ff00000 mmu_valid=0 mmu_low=0x10000000 frts=0x100000 heap=0x5800000 result=0
+Oct 25 06:27:10 gpu-vm kernel: pci 0000:00:10.0: layout ranges: nonwpr=0x175300000 wpr=0x175400000 heap=0x175500000 gsp=0x17ada0000 boot=0x17fdfa000 frts=0x17fe00000 end=0x17ff00000 scrub_floor=0x170000000
+Oct 25 06:27:10 gpu-vm kernel: pci 0000:00:10.0: DMA masks: streaming=0xffffffff coherent=0xffffffff requested=0xffffffff
+Oct 25 06:27:10 gpu-vm kernel: pci 0000:00:10.0: Booter signature: fuse_raw=0x1 version=1 signatures=2 size=768
+Oct 25 06:27:10 gpu-vm kernel: pci 0000:00:10.0: entry: plm=0xffffffff ss0=0x88888888 ss1=0x8 wpr2_hi=0x0
+Oct 25 06:27:10 gpu-vm kernel: pci 0000:00:10.0: failure unlock_610.c:1294 unlock_transaction_gfw error=-114 last_mmio=0x1fa828 value=0x0 valid=1 mapped=1 master=0 firmware_started=0 quiesced=0 pages=20606/20606
+Oct 25 06:27:10 gpu-vm kernel: pci 0000:00:10.0: last PCI sample: capability=0 offset=0x0 value=0x10de result=0
+Oct 25 06:27:10 gpu-vm kernel: pci 0000:00:10.0: driver probe resources: phase=handoff empty=1
+Oct 25 06:27:10 gpu-vm kernel: pci 0000:00:10.0: restore streaming mask: actual=0xffffffff expected=0xffffffff
+Oct 25 06:27:10 gpu-vm kernel: pci 0000:00:10.0: restore coherent mask: actual=0xffffffff expected=0xffffffff
+Oct 25 06:27:10 gpu-vm kernel: pci 0000:00:10.0: restore PCI command: actual=0x103 original=0x103 mask=0x6
+Oct 25 06:27:10 gpu-vm kernel: pci 0000:00:10.0: gpu_unlock: unlock failed (-114)
+Oct 25 06:27:10 gpu-vm gpu_unlock_experiment: modprobe completed status=0
+Oct 25 06:27:10 gpu-vm kernel: nvidia-nvlink: Nvlink Core is being initialized, major device number 239
+Oct 25 06:27:10 gpu-vm kernel: nvidia 0000:00:10.0: vgaarb: VGA decodes changed: olddecodes=io+mem,decodes=none:owns=io+mem
+Oct 25 06:27:10 gpu-vm kernel: NVRM: Failed to read PCI extended capability header at offset 0x100 while searching for NVIDIA DVSEC3, rc 0xffffffea
+Oct 25 06:27:10 gpu-vm kernel: NVRM: vbios_override: GPU 0000:00:10 selected: 484864 bytes from offset 0x9400 staged for GSP
+Oct 25 06:27:10 gpu-vm kernel: NVRM: loading NVIDIA UNIX Open Kernel Module for x86_64  615.71.09  Release Build  (root@3060)  Sun Oct 25 06:20:06 UTC 2026
+Oct 25 06:27:10 gpu-vm kernel: nvidia-modeset: Loading NVIDIA UNIX Open Kernel Mode Setting Driver for x86_64  615.71.09  Release Build  (root@3060)  Sun Oct 25 06:18:49 UTC 2026
+Oct 25 06:27:10 gpu-vm kernel: [drm] [nvidia-drm] [GPU ID 0x00000010] Loading driver
+Oct 25 06:27:10 gpu-vm kernel: NVRM: GPU0 unixCallVideoBIOS: int10h(4f03, 0000) vesa call failed! (01d0, 0000)
+Oct 25 06:27:10 gpu-vm kernel: [drm] Initialized nvidia-drm 0.0.0 20160202 for 0000:00:10.0 on minor 1
+Oct 25 06:27:10 gpu-vm kernel: nvidia 0000:00:10.0: [drm] Cannot find any crtc or sizes

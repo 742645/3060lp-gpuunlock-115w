@@ -1,0 +1,6 @@
+* text=auto eol=lf
+*.tar.gz binary
+*.sh text eol=lf
+*.py text eol=lf
+*.cu text eol=lf
+*.patch text eol=lf

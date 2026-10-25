@@ -1,0 +1,31 @@
+2026-10-25T04:58:45+00:00
+6.8.0-147-generic
+BOOT_IMAGE=/vmlinuz-6.8.0-147-generic root=/dev/mapper/ubuntu--vg-ubuntu--lv ro gpu_unlock.targets=0000:00:10.0 gpu_unlock.ga106m_experimental=1
+build/matched-bench/mma_bench: OK
+build/matched-bench/validate_gemm: OK
+build/matched-bench/gemm_bench: OK
+uuid, name, pci.bus_id, driver_version, power.limit [W], clocks.max.sm [MHz], memory.total [MiB]
+GPU-00000000-0000-4000-8000-000000000002, NVIDIA GeForce RTX 3060 Laptop GPU, 00000000:00:10.0, 580.178.04, [N/A], 2100 MHz, 6144 MiB
+{"gpu": "GPU-00000000-0000-4000-8000-000000000002, NVIDIA GeForce RTX 3060 Laptop GPU, 00000000:00:10.0, 580.178.04, [N/A], 210, 405", "command": "0x20801230", "rates": {"imla0": 0, "fmla16": 0, "dp": 0, "fmla32": 0, "ffma": 0, "imla1": 0, "imla2": 0, "imla3": 0, "imla4": 0}, "meaning": "0=full; 1=half; 2=quarter; higher values are further reductions", "hardware_changes": false}
+GPU: NVIDIA GeForce RTX 3060 Laptop GPU, sm_86, PCI 0000:00:10.0
+FP16/FP32: m=256 n=256 k=256 seed=1, 65536 cells, failures=0, max_abs=0
+BF16/FP32: m=256 n=256 k=256 seed=1, 65536 cells, failures=0, max_abs=0
+FP16/FP32: m=64 n=96 k=128 seed=2, 6144 cells, failures=0, max_abs=0
+BF16/FP32: m=64 n=96 k=128 seed=2, 6144 cells, failures=0, max_abs=0
+FP16/FP32: m=127 n=65 k=95 seed=3, 8255 cells, failures=0, max_abs=0
+BF16/FP32: m=127 n=65 k=95 seed=3, 8255 cells, failures=0, max_abs=0
+# NVIDIA GeForce RTX 3060 Laptop GPU, 30 SMs, sm_86, iters=5000 reps=5
+mode       best TF/s   all runs
+f16/f16         60.2 42.8/60.2/60.2/60.2/60.2
+f16/f32         60.3 60.2/60.2/60.2/60.3/60.2
+bf16/f32        59.3 59.3/59.1/59.1/59.2/59.2
+s8/s32         118.9 118.7/118.9/118.9/118.9/118.5
+dp4a            29.2 29.2/28.2/27.8/27.8/27.4
+ffma            13.1 13.1/12.8/12.7/12.5/12.5
+{"mode":"FP32_strict","n":2048,"warmups":10,"iterations":20,"reps":5,"times_ms":[2.58360329,2.68631039,2.64442883,2.64442883,2.64478722],"median_TF_s":6.496628,"best_TF_s":6.649577,"cells_checked":4194304,"failures":0}
+{"mode":"FP16_FP32acc","n":2048,"warmups":10,"iterations":20,"reps":5,"times_ms":[0.44180479,0.41216002,0.39505920,0.41840639,0.48225279],"median_TF_s":41.060246,"best_TF_s":43.486822,"cells_checked":4194304,"failures":0}
+{"mode":"FP32_strict","n":4096,"warmups":10,"iterations":20,"reps":5,"times_ms":[20.93875275,22.36113892,20.96255951,21.72436523,21.32223969],"median_TF_s":6.445803,"best_TF_s":6.563856,"cells_checked":16777216,"failures":0}
+{"mode":"FP16_FP32acc","n":4096,"warmups":10,"iterations":20,"reps":5,"times_ms":[3.31514893,3.38478088,3.38268166,3.34847984,3.35933456],"median_TF_s":40.912553,"best_TF_s":41.457852,"cells_checked":16777216,"failures":0}
+{"mode":"FP32_strict","n":8192,"warmups":10,"iterations":20,"reps":5,"times_ms":[140.49617920,140.30863037,140.49699707,140.89113770,141.04913330],"median_TF_s":7.825873,"best_TF_s":7.836379,"cells_checked":67108864,"failures":0}
+{"mode":"FP16_FP32acc","n":8192,"warmups":10,"iterations":20,"reps":5,"times_ms":[29.13986511,29.40897217,29.17186584,28.86410217,29.41066284],"median_TF_s":37.690823,"best_TF_s":38.092701,"cells_checked":67108864,"failures":0}
+BENCHMARK_COLLECTION_PASSED unlocked

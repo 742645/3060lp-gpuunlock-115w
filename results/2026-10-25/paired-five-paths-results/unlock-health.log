@@ -1,0 +1,8 @@
+6.8.0-147-generic
+BOOT_IMAGE=/vmlinuz-6.8.0-147-generic root=/dev/mapper/ubuntu--vg-ubuntu--lv ro gpu_unlock.targets=0000:00:10.0 gpu_unlock.ga106m_experimental=1
+Oct 25 05:42:38 gpu-vm gpu_unlock_experiment: begin before udev
+Oct 25 05:42:38 gpu-vm kernel: pci 0000:00:10.0: gpu_unlock: unlocked
+Oct 25 05:42:38 gpu-vm gpu_unlock_experiment: modprobe completed status=0
+name, driver_version, temperature.gpu, utilization.gpu [%]
+NVIDIA GeForce RTX 3060 Laptop GPU, 580.178.04, 37, 0 %
+{"gpu": "GPU-00000000-0000-4000-8000-000000000002, NVIDIA GeForce RTX 3060 Laptop GPU, 00000000:00:10.0, 580.178.04, [N/A], 210, 405", "command": "0x20801230", "rates": {"imla0": 0, "fmla16": 0, "dp": 0, "fmla32": 0, "ffma": 0, "imla1": 0, "imla2": 0, "imla3": 0, "imla4": 0}, "meaning": "0=full; 1=half; 2=quarter; higher values are further reductions", "hardware_changes": false}

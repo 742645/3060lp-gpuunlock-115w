@@ -1,0 +1,88 @@
+{
+  "driver_drift": null,
+  "enrolled": true,
+  "installed": true,
+  "last_attempt": {
+    "entry": "vbios-6.8.0-147-generic-8e389e0cc023216b00d7",
+    "finished": 1792909324.686022,
+    "kernel": "6.8.0-147-generic",
+    "marker": "VBIOS_READY",
+    "reused": false,
+    "state": "ready"
+  },
+  "migration": {},
+  "platform": {
+    "boot_backend": "grub",
+    "family": "debian",
+    "hook_provider": "apt",
+    "id": "ubuntu",
+    "package_provider": "deb"
+  },
+  "ready": true,
+  "ready_scope": "prepared-files-only",
+  "release": "b8d51f635420fc1e1f4607d81b775f27a96a259c46b1416213b80b00eb32bb9e",
+  "running_kernel": "6.8.0-147-generic",
+  "runtime": {
+    "activation_matches": true,
+    "applied": "unknown",
+    "diagnostics": [],
+    "electrical": "unknown",
+    "expected_parameters_source": "prepared-status",
+    "expected_parameters_version": "615.71.09",
+    "loaded_module": {
+      "srcversion": {
+        "available": true,
+        "expected": "17A3F58BBC1A2AA01048F1D",
+        "matches": true,
+        "observed": "17A3F58BBC1A2AA01048F1D",
+        "raw": "17A3F58BBC1A2AA01048F1D",
+        "state": "value",
+        "sysfs_path": "/sys/module/nvidia/srcversion"
+      },
+      "version": {
+        "available": true,
+        "expected": "615.71.09",
+        "matches": true,
+        "observed": "615.71.09",
+        "raw": "615.71.09",
+        "state": "value",
+        "sysfs_path": "/sys/module/nvidia/version"
+      }
+    },
+    "module_parameters": {
+      "NVreg_RegistryBinaryFilePerDevice": {
+        "available": true,
+        "expected": "pci=0000:00:10.0;RmLinuxVbiosOverrideImage=615.71.09/vbios-override/0000:00:10.0-e32f881baea5e743.bin",
+        "matches": true,
+        "observed": "pci=0000:00:10.0;RmLinuxVbiosOverrideImage=615.71.09/vbios-override/0000:00:10.0-e32f881baea5e743.bin",
+        "raw": "pci=0000:00:10.0;RmLinuxVbiosOverrideImage=615.71.09/vbios-override/0000:00:10.0-e32f881baea5e743.bin",
+        "state": "value",
+        "sysfs_path": "/sys/module/nvidia/parameters/NVreg_RegistryBinaryFilePerDevice"
+      },
+      "NVreg_RegistryDwords": {
+        "available": true,
+        "expected": "RmLinuxVbiosOverrideDisable=0",
+        "matches": true,
+        "observed": "RmLinuxVbiosOverrideDisable=0",
+        "raw": "RmLinuxVbiosOverrideDisable=0",
+        "state": "value",
+        "sysfs_path": "/sys/module/nvidia/parameters/NVreg_RegistryDwords"
+      },
+      "NVreg_RegistryDwordsPerDevice": {
+        "available": true,
+        "expected": "pci=0000:00:10.0;RmLinuxVbiosOverride=2;RmLinuxVbiosOverrideSize=522752",
+        "matches": true,
+        "observed": "pci=0000:00:10.0;RmLinuxVbiosOverride=2;RmLinuxVbiosOverrideSize=522752",
+        "raw": "pci=0000:00:10.0;RmLinuxVbiosOverride=2;RmLinuxVbiosOverrideSize=522752",
+        "state": "value",
+        "sysfs_path": "/sys/module/nvidia/parameters/NVreg_RegistryDwordsPerDevice"
+      }
+    },
+    "module_present": true,
+    "running_kernel": "6.8.0-147-generic",
+    "scope": "loaded-module-and-parameters-only"
+  },
+  "schema_version": 1,
+  "source_fetch": {},
+  "triggers_enabled": false
+}

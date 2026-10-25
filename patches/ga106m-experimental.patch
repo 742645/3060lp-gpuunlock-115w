@@ -1,0 +1,95 @@
+diff --git a/kernel/gpu_unlock/main.c b/kernel/gpu_unlock/main.c
+index 099f736..dcc7c3a 100644
+--- a/kernel/gpu_unlock/main.c
++++ b/kernel/gpu_unlock/main.c
+@@ -12,6 +12,11 @@ static char *targets;
+ module_param(targets, charp, 0444);
+ MODULE_PARM_DESC(targets, "\"all\" or comma-separated PCI addresses of supported RTX 4090/GA10x cards; AD103 and AD106 require an exact single address");
+ 
++/* GA106M Laptop is unvalidated: require explicit, exact-card opt-in. */
++static bool ga106m_experimental;
++module_param(ga106m_experimental, bool, 0444);
++MODULE_PARM_DESC(ga106m_experimental, "permit only experimental 10de:2520 with a single exact PCI address");
++
+ static bool ad103_experimental;
+ module_param(ad103_experimental, bool, 0444);
+ MODULE_PARM_DESC(ad103_experimental, "permit only the exact 10de:2705 AD103 canary with a single explicit PCI address");
+@@ -52,6 +57,8 @@ static bool supported(const struct pci_dev *pdev)
+ {
+ 	unsigned int i;
+ 
++	if (pdev->device == 0x2520)
++		return ga106m_experimental;
+ 	if (pdev->device == GU_AD103_RTX_4070_TI_SUPER)
+ 		return ad103_experimental;
+ 	if (pdev->device == GU_AD102_RTX_4090_D)
+@@ -137,6 +144,11 @@ static int __init gpu_unlock_init(void)
+ 	if (!all)
+ 		report_unmatched();
+ 	while ((pdev = next_supported(pdev))) {
++		if (pdev->device == 0x2520 &&
++		    (all || strcasecmp(targets, pci_name(pdev)))) {
++			pci_err(pdev, "gpu_unlock: experimental GA106M requires a single exact PCI target\n");
++			continue;
++		}
+ 		if (pdev->device == GU_AD103_RTX_4070_TI_SUPER &&
+ 		    (all || strcasecmp(targets, pci_name(pdev)))) {
+ 			pci_err(pdev, "gpu_unlock: experimental AD103 requires a single exact PCI target\n");
+diff --git a/tests/test_main.c b/tests/test_main.c
+index 43e20f4..2603e03 100644
+--- a/tests/test_main.c
++++ b/tests/test_main.c
+@@ -202,6 +202,7 @@ static void reset(char *list)
+ 	memset(&fake, 0, sizeof(fake));
+ 	device_count = 0;
+ 	targets = list;
++	ga106m_experimental = false;
+ 	ad103_experimental = false;
+ 	ad106_experimental = false;
+ }
+@@ -355,6 +356,45 @@ int main(void)
+ 	assert(fake.loads == 1 && fake.started == 1 && fake.unlocks[0]);
+ 	puts("ad106: gated exact-card dispatch PASS");
+ 
++	/* GA106M: default off, exact target only, no professional IDs or bound GPU. */
++	reset("0000:00:10.0");
++	add("0000:00:10.0", 0x2520, false);
++	run();
++	assert(!fake.loads && !fake.started);
++	reset("all");
++	ga106m_experimental = true;
++	add("0000:00:10.0", 0x2520, false);
++	run();
++	assert(!fake.loads && !fake.started);
++	assert(logged("experimental GA106M requires a single exact PCI target"));
++	reset("0000:00:10.0,0000:00:11.0");
++	ga106m_experimental = true;
++	add("0000:00:10.0", 0x2520, false);
++	run();
++	assert(!fake.loads && !fake.started);
++	reset("0000:00:11.0");
++	ga106m_experimental = true;
++	add("0000:00:10.0", 0x2520, false);
++	run();
++	assert(!fake.loads && !fake.started);
++	reset("0000:00:10.0");
++	ga106m_experimental = true;
++	add("0000:00:10.0", RTX_A2000, false);
++	run();
++	assert(!fake.loads && !fake.started);
++	reset("0000:00:10.0");
++	ga106m_experimental = true;
++	add("0000:00:10.0", 0x2520, true);
++	run();
++	assert(!fake.started);
++	reset("0000:00:10.0");
++	ga106m_experimental = true;
++	add("0000:00:10.0", 0x2520, false);
++	fake.expected_concurrent = 1;
++	run();
++	assert(fake.loads == 1 && fake.started == 1 && fake.unlocks[0]);
++	puts("ga106m: gated exact-card dispatch PASS");
++
+ 	/* No opt-in on the command line: the module does nothing. */
+ 	for (int empty = 0; empty < 2; empty++) {
+ 		reset(empty ? "" : NULL);

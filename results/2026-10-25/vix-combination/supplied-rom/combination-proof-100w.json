@@ -1,0 +1,9 @@
+{
+  "power_w": {
+    "Current Power Limit": 100.0,
+    "Default Power Limit": 100.0,
+    "Max Power Limit": 115.0
+  },
+  "unlock_provenance": "retained across warm reboot; independently verified full rates",
+  "combination_verified": true
+}

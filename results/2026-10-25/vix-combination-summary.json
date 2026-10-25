@@ -1,0 +1,207 @@
+{
+  "driver": "615.71.09",
+  "kernel": "6.8.0-147-generic",
+  "power_cap_W": 115.0,
+  "vbios_version": "94.06.13.00.63",
+  "payload_sha256": "e32f881baea5e74307ac14a612c3344bfcc9f8b5648245d4cb8da44870fded25",
+  "numerical_failures": 0,
+  "tensor_paths_verified": 15,
+  "cold_boot_verified": false,
+  "unlock_provenance": "retained across VM warm reboots; independently verified full rates",
+  "persistent_warm_boot_verified": true,
+  "telemetry": {
+    "samples": 450,
+    "observed_max_temperature_C": 55.0,
+    "observed_max_power_W": 97.15,
+    "observed_max_sm_MHz": 2002.0
+  },
+  "measurements": [
+    {
+      "mode": "fp32_simt",
+      "n": 2048,
+      "median_TFLOPS": 6.926437
+    },
+    {
+      "mode": "fp16_simt",
+      "n": 2048,
+      "median_TFLOPS": 12.136735
+    },
+    {
+      "mode": "tf32_tensor_fp32acc",
+      "n": 2048,
+      "median_TFLOPS": 22.838573
+    },
+    {
+      "mode": "fp16_tensor_fp16acc",
+      "n": 2048,
+      "median_TFLOPS": 39.424781
+    },
+    {
+      "mode": "fp16_tensor_fp32acc",
+      "n": 2048,
+      "median_TFLOPS": 36.543709
+    },
+    {
+      "mode": "fp32_simt",
+      "n": 4096,
+      "median_TFLOPS": 7.040192
+    },
+    {
+      "mode": "fp16_simt",
+      "n": 4096,
+      "median_TFLOPS": 11.980945
+    },
+    {
+      "mode": "tf32_tensor_fp32acc",
+      "n": 4096,
+      "median_TFLOPS": 22.532797
+    },
+    {
+      "mode": "fp16_tensor_fp16acc",
+      "n": 4096,
+      "median_TFLOPS": 40.479457
+    },
+    {
+      "mode": "fp16_tensor_fp32acc",
+      "n": 4096,
+      "median_TFLOPS": 43.37089
+    },
+    {
+      "mode": "fp32_simt",
+      "n": 8192,
+      "median_TFLOPS": 8.927004
+    },
+    {
+      "mode": "fp16_simt",
+      "n": 8192,
+      "median_TFLOPS": 12.062705
+    },
+    {
+      "mode": "tf32_tensor_fp32acc",
+      "n": 8192,
+      "median_TFLOPS": 23.421823
+    },
+    {
+      "mode": "fp16_tensor_fp16acc",
+      "n": 8192,
+      "median_TFLOPS": 41.843009
+    },
+    {
+      "mode": "fp16_tensor_fp32acc",
+      "n": 8192,
+      "median_TFLOPS": 42.989051
+    }
+  ],
+  "historical_comparison": {
+    "driver_and_vbios_changed": true,
+    "baseline_driver": "580.178.04",
+    "baseline_power_cap_W": 80.0,
+    "rows": [
+      {
+        "mode": "fp32_simt",
+        "n": 2048,
+        "old_unlocked_TFLOPS": 6.610799,
+        "new_TFLOPS": 6.926437,
+        "change_percent": 4.774581710924797
+      },
+      {
+        "mode": "fp16_simt",
+        "n": 2048,
+        "old_unlocked_TFLOPS": 11.656106,
+        "new_TFLOPS": 12.136735,
+        "change_percent": 4.1234096532752895
+      },
+      {
+        "mode": "tf32_tensor_fp32acc",
+        "n": 2048,
+        "old_unlocked_TFLOPS": 20.422661,
+        "new_TFLOPS": 22.838573,
+        "change_percent": 11.829565207002158
+      },
+      {
+        "mode": "fp16_tensor_fp16acc",
+        "n": 2048,
+        "old_unlocked_TFLOPS": 41.191298,
+        "new_TFLOPS": 39.424781,
+        "change_percent": -4.2885684253018646
+      },
+      {
+        "mode": "fp16_tensor_fp32acc",
+        "n": 2048,
+        "old_unlocked_TFLOPS": 37.490987,
+        "new_TFLOPS": 36.543709,
+        "change_percent": -2.5266819462501644
+      },
+      {
+        "mode": "fp32_simt",
+        "n": 4096,
+        "old_unlocked_TFLOPS": 6.789595,
+        "new_TFLOPS": 7.040192,
+        "change_percent": 3.6908976161317497
+      },
+      {
+        "mode": "fp16_simt",
+        "n": 4096,
+        "old_unlocked_TFLOPS": 11.513127,
+        "new_TFLOPS": 11.980945,
+        "change_percent": 4.0633443894087184
+      },
+      {
+        "mode": "tf32_tensor_fp32acc",
+        "n": 4096,
+        "old_unlocked_TFLOPS": 21.610202,
+        "new_TFLOPS": 22.532797,
+        "change_percent": 4.269256714953418
+      },
+      {
+        "mode": "fp16_tensor_fp16acc",
+        "n": 4096,
+        "old_unlocked_TFLOPS": 41.690939,
+        "new_TFLOPS": 40.479457,
+        "change_percent": -2.905864029591665
+      },
+      {
+        "mode": "fp16_tensor_fp32acc",
+        "n": 4096,
+        "old_unlocked_TFLOPS": 43.355481,
+        "new_TFLOPS": 43.37089,
+        "change_percent": 0.035541065730537724
+      },
+      {
+        "mode": "fp32_simt",
+        "n": 8192,
+        "old_unlocked_TFLOPS": 8.244142,
+        "new_TFLOPS": 8.927004,
+        "change_percent": 8.28299658108751
+      },
+      {
+        "mode": "fp16_simt",
+        "n": 8192,
+        "old_unlocked_TFLOPS": 10.446377,
+        "new_TFLOPS": 12.062705,
+        "change_percent": 15.472617922941122
+      },
+      {
+        "mode": "tf32_tensor_fp32acc",
+        "n": 8192,
+        "old_unlocked_TFLOPS": 21.862257,
+        "new_TFLOPS": 23.421823,
+        "change_percent": 7.133600158483189
+      },
+      {
+        "mode": "fp16_tensor_fp16acc",
+        "n": 8192,
+        "old_unlocked_TFLOPS": 42.196049,
+        "new_TFLOPS": 41.843009,
+        "change_percent": -0.8366660110760593
+      },
+      {
+        "mode": "fp16_tensor_fp32acc",
+        "n": 8192,
+        "old_unlocked_TFLOPS": 41.011077,
+        "new_TFLOPS": 42.989051,
+        "change_percent": 4.82302378940207
+      }
+    ]
+  }
+}
