@@ -2,7 +2,7 @@
 
 在 Linux 虚拟机中，对直通的 **RTX 3060 Laptop / GA106M** 进行 Tensor 速率解锁，并通过 VBIOS 内存覆盖测试 **115W 功耗上限**。
 
-本仓库包含单卡实验适配、启动镜像集成脚本、五路径 cuBLAS GEMM 基准、结果核验工具和原始证据。实验基于 [gpu-unlock-ada](https://github.com/JustAResearcher/gpu-unlock-ada) 与 [NVIDIA Linux VBIOS Vix Loader](https://github.com/Panchovix/nvidia-linux-vbios-vix-loader)，VBIOS 编辑使用 [NVIDIA VBIOS Vix Editor](https://github.com/Panchovix/nvidia-vbios-vix-editor)。完整来源见下方“开源项目与致谢”。
+本仓库包含单卡实验适配、启动镜像集成脚本、cuBLAS GEMM 基准、结果核验工具和原始证据。实验基于 [gpu-unlock-ada](https://github.com/JustAResearcher/gpu-unlock-ada) 与 [NVIDIA Linux VBIOS Vix Loader](https://github.com/Panchovix/nvidia-linux-vbios-vix-loader)，VBIOS 编辑使用 [NVIDIA VBIOS Vix Editor](https://github.com/Panchovix/nvidia-vbios-vix-editor)，为安全不提供解锁功耗vbios文件，完整来源见下方“开源项目与致谢”。
 
 **实验状态：** 已完成同卡、同驱动的原厂 80W / 解锁 80W 配对测试，以及 115W VBIOS 覆盖与 Tensor 全速状态同时生效的测试。仅验证了一张 `10de:2520` 显卡；115W 组合的宿主机冷启动完整链路尚未验证。
 
@@ -63,7 +63,7 @@
 
 该实验适配要求 `10de:2520`、显式开关和单个精确 PCI 地址；全选或多地址请求不会选中实验卡。固件与事务检查沿用固定上游版本。成功判定结合事务日志和独立硬件速率查询，不以模块加载成功或启动参数存在作为充分证据。
 
-### 115W VBIOS 内存覆盖
+### 115W VBIOS 内存覆盖（为安全不提供解锁功耗vbios文件）
 
 [Vix Loader](https://github.com/Panchovix/nvidia-linux-vbios-vix-loader) 的本次路径使用匹配版本的 NVIDIA 开源内核模块，在 GSP 初始化时传入 VBIOS 载荷。本次没有刷写显卡 ROM。
 
